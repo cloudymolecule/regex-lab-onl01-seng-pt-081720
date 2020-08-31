@@ -16,12 +16,12 @@ def words_five_letters_long(text)
 end
 
 def first_word_capitalized_and_ends_with_punctuation?(text)
-  if text.scan(/[A-Z].*[.,:;]$/)
+  if text.scan(/[a-z].*[.,:;]$/)
+    false
+  elsif text.match(/[A-Z].*[.,:;]$/)
     true
-  elsif text.match(/[a-z].*[.,:;]$/)
-    nil
   else
-    nil
+    false
   end
 
 end
